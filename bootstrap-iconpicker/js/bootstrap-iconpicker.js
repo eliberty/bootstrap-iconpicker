@@ -435,9 +435,7 @@
             var $this = $(this);
             var data = $this.data('bs.iconpicker');
             var options = typeof option === 'object' && option;
-            if (!data) {
-                $this.data('bs.iconpicker', (data = new Iconpicker(this, options)));
-            }
+            $this.data('bs.iconpicker', (data = new Iconpicker(this, options)));
             if (typeof option === 'string') {
                 if (typeof data[option] === 'undefined') {
                     throw 'Iconpicker => The "' + option + '" method does not exists.';
